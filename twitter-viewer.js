@@ -1,12 +1,13 @@
 "use strict";
 let express = require('express');
-let app = express();
+
+let config = require('./lib/config');
 
 const port = 8081;
 
-app.get('/', function (req, res) {
-    res.send('It\'s Working');
-});
+let app = express();
+config.applyConfiguration(app);
+config.applyRouting(app);
 
 let server = app.listen(port, function () {
 
