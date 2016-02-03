@@ -18,7 +18,7 @@
 <div class="container">
 
     <div class="header clearfix">
-        <h3 class="text-muted">Twitter Viewer</h3>
+        <h3>Twitter Viewer</h3>
     </div>
 
     <div class="jumbotron">
@@ -28,14 +28,13 @@
                 <fieldset class="form-group">
                     <label for="InputTwitterUsername">Enter Twitter Username</label>
                     <input type="username" class="form-control" id="InputTwitterUsername" placeholder="Enter username">
-                    <small class="text-muted">input any twitter name, try cnn.</small>
+                    <small class="text-muted">input any twitter name, try cnn. then press enter</small>
                 </fieldset>
             </form>
-            <p><a class="btn btn-lg btn-primary js-submit" href="#" role="button">Submit</a></p>
         </header>
 
         <section>
-            <div class="row twitter-listing">
+            <div class="row twitter-listing js-twitter_listing">
                 <div class="col-lg-6">
                     <h4>Subheading</h4>
                     <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
@@ -55,10 +54,13 @@
 
 </div> <!-- /container -->
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script>window.jQuery || document.write('<script src="/bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+<!-- JavaScript ================================================== -->
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.3.0.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-hashchange/1.3/jquery.ba-hashchange.min.js"></script>
 <script src="/js/vendor/ie10-viewport-bug-workaround.js"></script><!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/bower_components/lodash/dist/lodash.min.js"></script>
+
+<script src="/js/script.js"></script>
 </body>
 </html>
