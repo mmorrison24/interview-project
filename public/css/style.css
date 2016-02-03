@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import "https://fonts.googleapis.com/css?family=Roboto:500|Droid+Serif|Oswald";
+@import "https://fonts.googleapis.com/css?family=Roboto:400,500|Droid+Serif|Oswald";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -4919,8 +4919,13 @@ a.bg-danger:focus, a.bg-danger:hover {
   padding-right: 15px;
   padding-left: 15px; }
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px; } }
+
 html, body {
-  background-color: #ccc; }
+  background-color: #ccc;
+  color: #111; }
 
 body {
   padding-top: 20px;
@@ -4935,11 +4940,6 @@ h1, h2, h3, small {
 .header {
   padding-bottom: 20px; }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px; } }
-
-/* Main marketing message and sign up button */
 .jumbotron {
   border-radius: 0;
   padding: 0;
@@ -4952,12 +4952,25 @@ h1, h2, h3, small {
     background-color: #ca0002;
     padding: 20px;
     box-shadow: 0 10px 6px -6px #000; }
+  .jumbotron input {
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 40px;
+    padding: 0; }
+  .jumbotron .instructions {
+    color: white;
+    font-family: 'Roboto'; }
 
-form {
-  text-transform: uppercase; }
-  form label {
-    text-transform: uppercase;
-    font-size: 14px; }
+form label {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 0; }
+
+form input.form-control {
+  background: none;
+  border: none;
+  border-radius: 0; }
 
 .btn-primary {
   background-color: #EDB26A;
