@@ -34,11 +34,16 @@
         </header>
 
         <section>
-            <div class="row twitter-listing js-twitter_listing">
-                <div class="col-lg-6">
-                    <h4>Subheading</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
+            <div class="row twitter-listing js-twitter_listing"></div>
+            <div class="isTemplate js-tweet_template">
+                <div class="row tweet js-tweet">
+                    <div class="col-xs-12 col-md-4">
+                        <img src='${entities.media[0].media_url}'/>
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        <p class="small">${created_at}</p>
+                        <p>${text}</p>
+                    </div>
 
                 </div>
             </div>

@@ -4923,6 +4923,11 @@ a.bg-danger:focus, a.bg-danger:hover {
   .container {
     max-width: 730px; } }
 
+.tweet {
+  margin: 20px 0; }
+  .tweet img {
+    width: 100%; }
+
 html, body {
   background-color: #ccc;
   color: #111; }
@@ -4935,6 +4940,9 @@ body {
 
 h1, h2, h3, small {
   letter-spacing: 0; }
+
+.isTemplate {
+  display: none; }
 
 /* Custom page header */
 .header {

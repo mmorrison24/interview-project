@@ -1,6 +1,12 @@
-$(document).ready(function(){
-    console.log('hello');
+var root = root || {}
+_.extend( root, {
+    template: null,
+    default_image: '/css/no-image.png',
+    no_tweets_image: "https://media.giphy.com/media/KYNywoibU1PQ4/giphy.gif"
+})
 
+$(document).ready(function(){
+    root.template = _.template( $('.js-tweet_template').html() );
     bindEventListeners();
 
 });
@@ -66,12 +72,15 @@ function onTweetsReceived( recieved ){
     var data = recieved.data;
 
     if( data.length === 0 ) {
-        $('.js-twitter_listing').html( '<p>User has no Tweets to show</p><img src="https://media.giphy.com/media/KYNywoibU1PQ4/giphy.gif"/>' ).focus();
+        $('.js-twitter_listing').html( '<p>User has no Tweets to show</p><img src="'+root.no_tweets_image+'"/>' ).focus();
         return;
     }
 
-    var template = JSON.stringify(data);
+    var generatedHTML = _.reduce(data, function(templateStr, tweet){
+        _.defaultsDeep(tweet,{entities:{media:[{media_url:root.default_image}]}}) //ensure we have a default image
+        return templateStr.concat( root.template(tweet) );
+    }, '')
 
-    $('.js-twitter_listing').text( template ).focus();
+    $('.js-twitter_listing').html( generatedHTML ).focus();
 
 }
