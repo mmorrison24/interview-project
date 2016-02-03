@@ -17,8 +17,14 @@
   "homepage": "https://github.com/mmorrison24/interview-project#readme",
   "dependencies": {
     "express": "^4.13.4",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-util": "^3.0.7",
     "lodash": "^4.2.0",
     "path": "^0.12.7",
     "twitter": "^1.2.5"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.1.0"
   }
 }

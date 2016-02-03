@@ -1,0 +1,7 @@
+{
+  "name": "twitter-viewer front end",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "4.0"
+  }
+}
