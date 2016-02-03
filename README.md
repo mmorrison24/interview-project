@@ -44,9 +44,9 @@ then in anothe terminal start the server as listed above
 
     npm start
 
-#Improvments + Considerations
+#Improvements + Considerations
 
-*Would have liked to add at least simple integration testing that would hit the getTweets route on the server and ensure correct functioning.
+*Would have liked to add at least simple integration testing that would hit the getTweets route on the node server and ensure correct functioning.
 
 *Error handeling and easier loading of twitter api credentials. (support loading from file as a fallback to using process env vars)
 
@@ -54,6 +54,8 @@ then in anothe terminal start the server as listed above
 
 *FRONTEND: do a better job of breaking out the SASS files, I started this process but did'nt want to spend to much time on it. the _mobile and _tweet files are a start at that idea. In a larger project I would scaffold diffrent folders for (layouts, modules[....like tweet.sass], layout and style)
 
-*FRONTEND: Wanted to expiremnt with React and see how it could have saved some wiring of components
+*FRONTEND: Wanted to experiment with React and see how it could have saved some wiring of components
 
 *(small) support changing port with a setting in package.json file
+
+*I wanted to keep the idea of seperating the api(getTweets) and the frontend static route. This would allow breaking the backend out as a seperate server if the project grew in size.
