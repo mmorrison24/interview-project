@@ -1,5 +1,5 @@
 # interview-project
-twitter viewer is a responsive HTML5 website that displays the 15 latest tweets of any public twitter user.
+twitter viewer is a responsive HTML5 website hosted by a locally running ES6 Node express server that displays the 15 latest tweets of any public twitter user.
 
 ## installation and running the server
 The build and run process for AdVisor is meant to be as easy as pie.
@@ -43,3 +43,17 @@ npm install -g gulp
 then in anothe terminal start the server as listed above
 
     npm start
+
+#Improvments + Considerations
+
+*Would have liked to add at least simple integration testing that would hit the getTweets route on the server and ensure correct functioning.
+
+*Error handeling and easier loading of twitter api credentials. (support loading from file as a fallback to using process env vars)
+
+*FRONTEND: further breakout javascript into 3 seperate files (entry.js, events.js and onHashchange.js) + use webpack to manage this
+
+*FRONTEND: do a better job of breaking out the SASS files, I started this process but did'nt want to spend to much time on it. the _mobile and _tweet files are a start at that idea. In a larger project I would scaffold diffrent folders for (layouts, modules[....like tweet.sass], layout and style)
+
+*FRONTEND: Wanted to expiremnt with React and see how it could have saved some wiring of components
+
+*(small) support changing port with a setting in package.json file
