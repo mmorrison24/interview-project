@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import "https://fonts.googleapis.com/css?family=Roboto:400,500|Droid+Serif|Oswald";
+@import "https://fonts.googleapis.com/css?family=Roboto:400,500|Droid+Serif|Oswald:300,400";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -4924,9 +4924,24 @@ a.bg-danger:focus, a.bg-danger:hover {
     max-width: 730px; } }
 
 .tweet {
-  margin: 20px 0; }
+  margin: 20px 0;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: white; }
+  .tweet .text {
+    padding: 10px; }
   .tweet img {
-    width: 100%; }
+    width: 100%;
+    border: 6px solid #333; }
+  .tweet p.small {
+    font-family: 'Droid Serif';
+    color: #E9EEF2; }
+  .tweet p {
+    font-weight: 300; }
 
 html, body {
   background-color: #ccc;
@@ -4966,6 +4981,8 @@ h1, h2, h3, small {
     font-weight: 400;
     font-size: 40px;
     padding: 0; }
+    .jumbotron input::-webkit-input-placeholder {
+      color: white; }
   .jumbotron .instructions {
     color: white;
     font-family: 'Roboto'; }

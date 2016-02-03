@@ -23,6 +23,7 @@ function onHashChange(e) {
 
     var hash = location.hash.replace( /^#/, '' ) || null;
 
+    $('#InputTwitterUsername').val( hash );
     doSearch( hash );
 
 }
@@ -72,8 +73,11 @@ function onTweetsReceived( recieved ){
     var data = recieved.data;
 
     if( data.length === 0 ) {
-        $('.js-twitter_listing').html( '<p>User has no Tweets to show</p><img src="'+root.no_tweets_image+'"/>' ).focus();
-        return;
+        data = [{
+            created_at: '',
+            text:'User has no tweets to share :(',
+            entities:{ media:[{media_url:root.no_tweets_image}]}
+        }]
     }
 
     var generatedHTML = _.reduce(data, function(templateStr, tweet){
